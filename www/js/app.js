@@ -32,6 +32,15 @@ angular.module('hive', ['ionic', 'hive.controllers'])
     controller: 'AppCtrl'
   })
 
+  .state('app.mykpi', {
+    url: '/mykpi',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/my-kpis.html'
+      }
+    }
+  })
+
   .state('app.search', {
     url: '/search',
     views: {
@@ -69,5 +78,5 @@ angular.module('hive', ['ionic', 'hive.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/mykpi');
 });
