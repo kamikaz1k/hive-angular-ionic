@@ -1,4 +1,36 @@
 /* Empty. Add your own CSS if you like */
 .card {
     height: 200px;
+    margin-bottom: 0px;
+}
+
+.item-text-wrap {
+    padding-top: 20px;
+}
+
+table#cards-table {
+    font-size:14px;
+    /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#cards-table td, #cards-table th {
+    /*border: 1px solid #ddd;*/
+    text-align: left;
+    padding: 8px;
+}
+
+/*#cards-table tr:nth-child(even){background-color: #f2f2f2}*/
+
+#cards-table th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }

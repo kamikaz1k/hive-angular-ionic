@@ -12,9 +12,28 @@
                     <div class="item item-divider">
                         Utilization
                     </div>
-                    <div class="item item-text-wrap">
-                        <div easypiechart id="utilization-chart" options="options" percent="KPI.utilization.percent"></div>
-                        This is a basic Card with some text.
+                    <div class="item item-text-wrap row">
+                        <div class="col col-25" easypiechart id="utilization-chart" options="options" percent="KPI.utilization.percent"></div>
+                        
+                        <div class="col col-75 col-offset-25">
+                            <table id="cards-table">
+                                <tr>
+                                    <td>Target</td>
+                                    <td>92%</td>
+                                    <td> </td> <!-- The extra column is to give padding in fill width views -->
+                                </tr>
+                                <tr>
+                                    <td>As of</td>
+                                    <td>{{KPI.utilization.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>Availibility</td>
+                                    <td>{{KPI.utilization.availableDate | date:"MM/dd/yyyy"}}</td>
+                                    <td> </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,7 +43,6 @@
                         YTD Late Timesheets
                     </div>
                     <div class="item item-text-wrap">
-                        <!-- <div easypiechart id="utilization-chart" options="options" percent="KPI.utilization.percent"></div> -->
                         This is a basic Card with some text.
                     </div>
                 </div>
