@@ -31,6 +31,20 @@ table#cards-table {
     color: white;
 }
 
+#utilization-chart {
+    padding-left: 25px;
+}
+
+.main-column > p {
+    text-align: center;
+    font-size: 45px;
+    padding-top: 40px;
+}
+
+.cards-table-col {
+    margin-left: 35px;
+}
+
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }

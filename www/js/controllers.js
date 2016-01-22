@@ -91,7 +91,12 @@ angular.module('hive.controllers', [])
       percent: 95,
       relevantDate: new Date(),
       availableDate: new Date()
+    },
+    lateTimeSheets: {
+      number: 0,
+      relevantDate: new Date()
     }
+
   }
 
   $scope.showPercentage = function(){
