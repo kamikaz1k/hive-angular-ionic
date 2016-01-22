@@ -13,22 +13,32 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+    <ion-header-bar class="bar-light side-menu-bar">
+      <img src="img/hive_logo-blk.png" class="menu-hive-logo">
+      <!-- <h1 class="title">by</h1> -->
+      <img src="img/collaborative-logo.png" class="menu-cap-logo">
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
+        <ion-item class="item item-icon-left no-border" menu-close ng-click="login()">
+          <i class="icon ion-android-person"></i>
           Login
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item class="item item-icon-left no-border" menu-close href="#/app/mykpi">
+          <i class="icon ion-ios-home"></i>
+          My KPIs
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item class="item item-icon-left no-border" menu-close href="#/app/browse">
+          <i class="icon ion-android-checkbox"></i>
+          Expectations
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item class="item item-icon-left no-border" menu-close href="#/app/playlists">
+          <i class="icon ion-android-bookmark"></i>
+          Glossary
+        </ion-item>
+        <ion-item class="item item-icon-left no-border" menu-close href="#/app/playlists">
+          <i class="icon ion-briefcase"></i>
+          NA Organization
         </ion-item>
       </ion-list>
     </ion-content>
