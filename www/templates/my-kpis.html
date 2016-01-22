@@ -77,6 +77,7 @@
                     <div class="item item-divider">
                         Revenue Managed
                     </div>
+                    
                     <div class="item item-text-wrap row">
                         <div class="col col-25 main-column">
                             <p>{{KPI.revenueManaged.amount | currency:"$":0}}</p>
@@ -109,8 +110,31 @@
                     <div class="item item-divider">
                         Team Sales
                     </div>
-                    <div class="item item-text-wrap">
-                        This is a basic Card with some text.
+
+                    <div class="item item-text-wrap row">
+                        <div class="col col-25 main-column">
+                            <p>{{KPI.teamSales.amount | currency:"$":0}}</p>
+                        </div>
+                        
+                        <div class="col col-75 col-offset-25 cards-table-col">
+                            <table id="cards-table">
+                                <tr>
+                                    <td>Target</td>
+                                    <td>{{KPI.teamSales.target}}</td>
+                                    <td> </td> <!-- The extra column is to give padding in fill width views -->
+                                </tr>
+                                <!-- <tr>
+                                    <td>Current Missing</td>
+                                    <td>{{KPI.teamSales.number}}</td>
+                                    <td> </td>
+                                </tr> -->
+                                <tr>
+                                    <td>As of</td>
+                                    <td>{{KPI.teamSales.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                    <td> </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
