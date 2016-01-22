@@ -159,5 +159,61 @@ angular.module('hive.controllers', [])
 
 })
 
+.controller('OrganizationCtrl', function($scope, HiveServices, $http, $ionicPopup) {
+
+  // $http.ajax({
+  //       type: "GET",
+  //       url: "NA_Organization_2016-01-21.csv",
+  //       dataType: "text",
+  //       success: function(data) {processData(data);}
+  //    });
+
+  $scope.viewData = { organization: [] }; 
+
+  $scope.showContacts = function(index){
+    console.log($scope.viewData.organization[index]);
+  }
+
+  function processData(allText) {
+      var delimiter = "\t";
+
+      var allTextLines = allText.split(/\r\n|\n/);
+      //window.allTextLines = allTextLines;
+      var headers = allTextLines[0].split(delimiter);
+
+      //console.log(headers);
+      $scope.viewData.orgHeader = headers;
+      $scope.viewData.organization = [];
+
+      for (var i = 1; i < allTextLines.length; i++) {
+
+          var data = allTextLines[i].split(delimiter);
+          if (data.length == headers.length) {
+
+              var tarr = {};
+              for (var j = 0; j < headers.length; j++) {
+                  // Associative array for all the attributes
+                  tarr[ headers[j] ] = data[j];
+              }
+              // Add new entry to array
+              $scope.viewData.organization.push(tarr);
+          }
+      }
+      console.log("processed", $scope.viewData);
+  }
+
+  // Request to get the contacts book
+  $http({
+    url: "NA_Organization_2016-01-21.csv",
+    method: "GET",
+    dataType: "text"
+  }).success(function(data, status, headers, config) {
+      // After retrival process it
+      console.log("Contact Book retrived: ", data);
+      processData(data);
+  })
+
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

@@ -62,6 +62,16 @@ angular.module('hive', ['ionic', 'hive.controllers', 'hive.services', 'easypiech
     }
   })
 
+  .state('app.organization', {
+    url: '/organization',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/organization.html',
+          controller: 'OrganizationCtrl'
+      }
+    }
+  })
+
   .state('app.search', {
     url: '/search',
     views: {
@@ -99,5 +109,5 @@ angular.module('hive', ['ionic', 'hive.controllers', 'hive.services', 'easypiech
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/glossary');
+  $urlRouterProvider.otherwise('/app/organization');
 });
