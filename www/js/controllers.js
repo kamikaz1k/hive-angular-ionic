@@ -52,39 +52,25 @@ angular.module('hive.controllers', [])
   ];
 })
 
-.controller('KPICtrl', function($scope) {
+.controller('KPICtrl', function($scope, $timeout) {
 
-  // var canvasWidth = 85;
-  // var canvasHeight = 85;
-  // var circleRadius = 32;
-  // var c = document.getElementById("utilization-chart");
-  // var ctx = c.getContext("2d");
-  // // ctx.beginPath();
-  // // ctx.arc(canvasWidth/2, canvasHeight/2, circleRadius, 0.75 * 2 * Math.PI, 2 * Math.PI * (0.95 - 0.25));
-  // // ctx.lineWidth=8;
-  // // // ctx.strokeStyle="#3399ff";
-  // // ctx.strokeStyle="#57889c";
-  // // ctx.stroke();
+  // $scope.percent = 65;
+  //     $scope.anotherPercent = -45;
+  //     $scope.anotherOptions = {
+  //       animate:{
+  //         duration:0,
+  //         enabled:false
+  //       },
+  //       barColor:'#2C3E50',
+  //       scaleColor:false,
+  //       lineWidth:20,
+  //       lineCap:'circle'
+  //     };
 
-  $scope.percent = 65;
-  $scope.presentationOptions = {
-    chartForKPI: {}
-  }
-
-  // Structure for PI Chart
-  $scope.options = {
-    animate: {
-          duration: 1000,
-          enabled: true
-    },
-    barColor:'#57899c',
-    // barColor:'#2C3E50',
-    // trackColor: '#000',
-    percent: 65,
-    scaleColor:false,
-    lineWidth:8,
-    lineCap:'circle'
-  };
+  // $scope.percent = 65;
+  // $scope.presentationOptions = {
+  //   chartForKPI: {}
+  // }
 
   $scope.KPI = {
     utilization: {
@@ -121,6 +107,22 @@ angular.module('hive.controllers', [])
 
   }
 
+
+  // Structure for PI Chart
+  $scope.options = {
+    animate: {
+          duration: 1000,
+          enabled: true
+    },
+    barColor:'#57899c',
+    // barColor:'#2C3E50',
+    // trackColor: '#000',
+    percent: 65,
+    scaleColor:false,
+    lineWidth:8,
+    lineCap:'circle'
+  };
+
   $scope.showPercentage = function(){
     var canvasWidth = 0;
     var canvasHeight = 0;
@@ -137,6 +139,16 @@ angular.module('hive.controllers', [])
 
   window.showP = $scope.showPercentage;
 
+  // $timeout(function() {
+  //     $scope.showPercentage();
+  //   }, 2000);
+
+
+})
+
+.controller('ExpectationsCtrl', function($scope) {
+
+  $scope.expectations = { level: "Consultant", items: [] }
 
 })
 

@@ -70,6 +70,37 @@ table#cards-table {
     margin-left: 20px;
 }
 
+table#expectations-table {
+    font-size:14px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#expectations-table td, #expectations-table th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#expectations-table tr:nth-child(even){background-color: #f4f4f4}
+
+#expectations-table tr:hover {
+    background-color: #eaf4ff;
+}
+
+#expectations-table tr:hover td {
+    background-color: transparent; /* or #000 */
+}
+
+#expectations-table th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #444444;
+    color: white;
+}
+
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }

@@ -1,0 +1,131 @@
+<ion-view view-title="My Expectations">
+  <ion-content>
+    <ion-list>
+
+        <ion-item class="item item-icon-left">
+            <i class="icon ion-android-checkbox"></i>
+            My Expectations
+        </ion-item>
+
+        <div class="card" style="height: 100%;">
+
+            <div class="item item-divider">
+                Level: {{expectations.level}}
+            </div>
+
+            <div class="item item-text-wrap">
+                <table id="expectations-table">
+                    <tr>
+                        <th>Competencies</th>
+                        <th>Core KPIs</th>
+                        <th>Compliance and Role Expectations that Imapact APR</th>
+                        <th>Differentiator KPIs</th>
+                    </tr>
+                    <!-- For when it is consumed by the service -->
+                    <tr ng-repeat="item in expectations.items">
+                        <td>{{item.competencies}}</td>
+                        <td>{{item.coreKPIs}}</td>
+                        <td>{{item.compliance}}</td>
+                        <td>{{item.differentiators}}</td>
+                    </tr>
+
+                    <tr>
+                        <td><u>Business Pioneer:</u>
+                            <br>Client Acquisition &amp; Development</td>
+                            <td>
+                                <ul></ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Actively supports sales pursuit efforts</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Identifies project or CR opportunity for Sales Pipeline</li>
+                                    <li>Team Sales in SPADE</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><u>Profit Shaper:</u>
+                                <br>Business Leadership</td>
+                                <td>
+                                    <ul>
+                                        <li>Has accomplished the Staff Level utilization target of 92%</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>No more than 2 late time/expense sheets</li>
+                                        <li>Team Methodology Compliance Review (MCR) Review Scores of 2 for engagements</li>
+                                        <li>ALC forecast accuracy</li>
+                                        <li>Minimum of 2 AA performance reviews (minimum score of 3)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Actively participates in CM improvement</li>
+                                        <li>Documented content contribution to Industrialization program</li>
+                                        <li>Logs Continuous Improvement opportunity and follows through to implementation</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><u>People Leader:</u>
+                                    <br>People Leadership</td>
+                                    <td>
+                                        <ul></ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Local office participation - Cap Connects attendance</li>
+                                            <li>Completes performance milestones on time</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Participation in on-boarding</li>
+                                            <li>Local Office leadership - Cap Connects, Community or Other</li>
+                                            <li>Campus Hire recruiting attainment (per University)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><u>Collaboration:</u>
+                                        <br>Innovation and Capability Growth</td>
+                                        <td>
+                                            <ul></ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Submits relevant pursuit and engagement deliverables to the relevant community in KM2.0 for reuse for all projects and, or pursuits</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Provides significant contribution to Service Line Industrialization above and beyond full time project work</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><u>La Niaque:</u>
+                                            <br>Service &amp; Delivery</td>
+                                            <td>
+                                                <ul></ul>
+                                            </td>
+                                            <td>
+                                                <ul></ul>
+                                            </td>
+                                            <td>
+                                                <ul></ul>
+                                            </td>
+                                        </tr>                    
+                </table>
+            </div>
+
+        </div>
+
+    </ion-list>
+  </ion-content>
+</ion-view>
