@@ -175,9 +175,9 @@ angular.module('hive.controllers', [])
       $scope.modal = modal;
   });
 
-  $scope.showContacts = function(index){
-    console.log($scope.viewData.organization[index]);
-    $scope.selected = $scope.viewData.organization[index];
+  $scope.showContacts = function(contact){
+    console.log(contact);
+    $scope.selected = contact;
 
     $scope.modal.show();
 

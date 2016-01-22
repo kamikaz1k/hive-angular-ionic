@@ -30,7 +30,7 @@
                         <th>Phone</th>
                     </tr>
                     <!-- For when it is consumed by the service -->
-                    <tr ng-repeat="item in viewData.organization | filter:filter" ng-click="showContacts($index)">
+                    <tr ng-repeat="item in viewData.organization | filter:filter" ng-click="showContacts(item)">
                         <td>{{item["BU"]}}</td>
                         <td>{{item["Leadership Role"]}}</td>
                         <td>{{item["Sub Unit"]}}</td>
