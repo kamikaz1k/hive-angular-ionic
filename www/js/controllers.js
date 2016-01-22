@@ -89,11 +89,18 @@ angular.module('hive.controllers', [])
   $scope.KPI = {
     utilization: {
       percent: 95,
+      target: 92,
       relevantDate: new Date(),
       availableDate: new Date()
     },
     lateTimeSheets: {
       number: 0,
+      target: 2,
+      relevantDate: new Date()
+    },
+    revenueManaged: {
+      amount: 550000,
+      target: 0,
       relevantDate: new Date()
     }
 
