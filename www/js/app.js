@@ -22,7 +22,8 @@ angular.module('hive', ['ionic', 'hive.controllers', 'hive.services', 'easypiech
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.scrolling.jsScrolling(false);
   $stateProvider
 
     .state('app', {
