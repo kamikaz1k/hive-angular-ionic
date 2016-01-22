@@ -76,6 +76,12 @@ table#expectations-table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+    padding: 0px; /*Remove padding between card and table*/
+}
+
+/*Make the last column take up remaining space in parent div*/
+table td:last-child {
+    width: 100%;
 }
 
 #expectations-table td, #expectations-table th {

@@ -152,5 +152,12 @@ angular.module('hive.controllers', [])
 
 })
 
+.controller('GlossaryCtrl', function($scope, HiveServices) {
+
+  $scope.glossary = HiveServices.getGlossary();
+  console.log($scope.glossary);
+
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
