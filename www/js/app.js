@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('hive', ['ionic', 'hive.controllers', 'easypiechart'])
+angular.module('hive', ['ionic', 'hive.controllers', 'hive.services', 'easypiechart'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -38,6 +38,26 @@ angular.module('hive', ['ionic', 'hive.controllers', 'easypiechart'])
       'menuContent': {
         templateUrl: 'templates/my-kpis.html',
           controller: 'KPICtrl'
+      }
+    }
+  })
+
+  .state('app.expectations', {
+    url: '/expectations',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/expectations.html',
+          controller: 'ExpectationsCtrl'
+      }
+    }
+  })
+
+  .state('app.glossary', {
+    url: '/glossary',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/glossary.html',
+          controller: 'GlossaryCtrl'
       }
     }
   })
@@ -79,5 +99,5 @@ angular.module('hive', ['ionic', 'hive.controllers', 'easypiechart'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/mykpi');
+  $urlRouterProvider.otherwise('/app/glossary');
 });
