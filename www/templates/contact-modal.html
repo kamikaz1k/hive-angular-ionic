@@ -1,0 +1,42 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title contacts-view-title">Info: {{selected["Name"]}}</h1>
+        <div class="buttons">
+            <button class="button icon-right ion-close" ng-click="closeModalView()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="map-view-content">
+
+    <div class="list">
+        <label class="item item-input">
+            <span class="input-label">Name</span>
+            <p class="contact-details">{{selected["Name"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Email</span>
+            <p class="contact-details">{{selected["Email"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Phone</span>
+            <p class="contact-details">{{selected["Phone"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">BU</span>
+            <p class="contact-details">{{selected["BU"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Leadership Role</span>
+            <p class="contact-details">{{selected["Leadership Role"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Sub Unit</span>
+            <p class="contact-details">{{selected["Sub Unit"]}}</p>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Role Area</span>
+            <p class="contact-details">{{selected["Role Area"]}}</p>
+        </label>
+    </div>
+
+    </ion-content>
+</ion-modal-view>

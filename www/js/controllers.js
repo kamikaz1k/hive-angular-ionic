@@ -159,7 +159,7 @@ angular.module('hive.controllers', [])
 
 })
 
-.controller('OrganizationCtrl', function($scope, HiveServices, $http, $ionicPopup) {
+.controller('OrganizationCtrl', function($scope, HiveServices, $http, $ionicModal) {
 
   // $http.ajax({
   //       type: "GET",
@@ -170,9 +170,26 @@ angular.module('hive.controllers', [])
 
   $scope.viewData = { organization: [] }; 
 
+  $ionicModal.fromTemplateUrl('templates/contact-modal.html', { scope: $scope })
+  .then(function(modal) {
+      $scope.modal = modal;
+  });
+
   $scope.showContacts = function(index){
     console.log($scope.viewData.organization[index]);
+    $scope.selected = $scope.viewData.organization[index];
+
+    $scope.modal.show();
+
   }
+
+  $scope.closeModalView = function(){
+    $scope.modal.hide();
+  }
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
 
   function processData(allText) {
       var delimiter = "\t";
