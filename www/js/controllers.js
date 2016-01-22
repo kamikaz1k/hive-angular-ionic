@@ -107,6 +107,11 @@ angular.module('hive.controllers', [])
       target: 0,
       amount: 2000000,
       relevantDate: new Date()
+    },
+    leadSales: {
+      target: 0,
+      amount: 500000,
+      relevantDate: new Date()
     }
 
   }
